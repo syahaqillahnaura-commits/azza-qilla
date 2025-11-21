@@ -1,0 +1,181 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin-top: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+/* Selection Group Styling */
+.selection-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.selection-group button {
+    padding: 12px 25px;
+    border: 2px solid #007bff;
+    background-color: #ffffff;
+    color: #007bff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+    font-weight: 600;
+    flex-grow: 1;
+    max-width: 150px;
+}
+
+.selection-group button:hover {
+    background-color: #e9f5ff;
+}
+
+.selection-group button.selected {
+    background-color: #007bff;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+/* Quiz Card Styling */
+.card {
+    background-color: #f7f9fc;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+#question-counter {
+    text-align: center;
+    font-style: italic;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+#question-text {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Options Styling */
+.options button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    text-align: left;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+    font-size: 15px;
+}
+
+.options button:hover:not(.selected) {
+    background-color: #f0f0f0;
+}
+
+.options button.selected {
+    background-color: #007bff;
+    color: #ffffff;
+    border-color: #007bff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Button Styling */
+#next-button, #restart-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#next-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#next-button:not(:disabled):hover {
+    background-color: #218838;
+}
+
+#restart-button {
+    background-color: #ffc107;
+    margin-top: 20px;
+}
+
+#restart-button:hover {
+    background-color: #e0a800;
+}
+
+/* Result Screen Styling */
+.result-details {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px dashed #007bff;
+    border-radius: 8px;
+    background-color: #f0f8ff;
+    text-align: left;
+}
+
+.result-details p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+#final-score {
+    font-size: 2.5em;
+    font-weight: 700;
+    text-align: center;
+    color: #28a745;
+    margin-top: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}

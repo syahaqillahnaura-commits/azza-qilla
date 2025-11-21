@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Pintar Pelajaran Sekolah</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz Pintar</h1>
+
+        <div id="selection-screen" class="screen active">
+            <h2>Pilih Jenjang Pendidikan</h2>
+            <div class="selection-group" id="level-selection">
+                <button data-level="SD">SD</button>
+                <button data-level="SMP">SMP</button>
+                <button data-level="SMA">SMA</button>
+            </div>
+
+            <h2 id="subject-title" style="display: none;">Pilih Mata Pelajaran</h2>
+            <div class="selection-group" id="subject-selection">
+                </div>
+        </div>
+
+        <div id="quiz-screen" class="screen">
+            <h2 id="quiz-title"></h2>
+            <p id="question-counter">Soal 1 dari 15</p>
+
+            <div class="card">
+                <p id="question-text"></p>
+                <div id="options-container" class="options">
+                    </div>
+            </div>
+            
+            <button id="next-button" disabled>Soal Selanjutnya</button>
+        </div>
+
+        <div id="result-screen" class="screen">
+            <h2>🎉 Hasil Kuis Anda 🎉</h2>
+            <div class="result-details">
+                <p>Jenjang: <span id="result-level"></span></p>
+                <p>Mata Pelajaran: <span id="result-subject"></span></p>
+                <p>Jumlah Soal Benar: <span id="result-correct"></span> / 15</p>
+            </div>
+            <div id="final-score"></div>
+            
+            <button id="restart-button">Coba Lagi</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
